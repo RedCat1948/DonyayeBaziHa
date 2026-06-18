@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #00bfff;
+    --background-dark: #111;
+    --background-medium: #181818;
+    --background-light: #222;
+    --text-light: #eee;
+    --text-muted: #aaa;
+    --accent-color: #ffd700;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--background-light);
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--text-light);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#intro {
+    background-image: url('images/hero-bg.jpg'); /* Add a hero image if you have one */
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+#intro:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 9px 17px rgba(0, 217, 255, 0.8);
+}
+
+#intro h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+#intro p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#reviews {
+    background-color: var(--background-medium);
+}
+
+#reviews h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.game-card {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: center;
+    background-color: var(--background-light);
+    margin: 25px auto;
+    max-width: 800px; /* Slightly wider */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.8);
+}
+
+.game-card img {
+    width: 150px; /* Larger image */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Ensure images cover the area */
+}
+
+.game-card .info {
+    padding: 25px;
+    flex: 1; /* Take remaining space */
+    text-align: right;
+}
+
+.game-card h3 {
+    font-size: 1.8em;
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.game-card p {
+    font-size: 1.1em;
+    color: var(--text-muted);
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white !important; /* Override potential inherited styles */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #008cbf;
+}
+
+#about, #contact {
+    background-color: var(--background-dark);
+}
+
+#about h2, #contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9em;
+    }
+    #intro h2 {
+        font-size: 2.5em;
+    }
+    .game-card {
+        flex-direction: column; /* Stack image and info vertically */
+        text-align: center; /* Center align text when stacked */
+    }
+    .game-card img {
+        width: 100%; /* Full width image */
+        height: 250px; /* Adjust height for vertical layout */
+    }
+    .game-card .info {
+        text-align: center; /* Center align info text */
+        padding: 20px;
+    }
+    .game-card h3 {
+        font-size: 1.5em;
+    }
+}

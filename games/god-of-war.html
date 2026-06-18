@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نقد بازی God Of War</title>
+    <!-- Linking main stylesheet and game-specific stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="games.css">
+    <!-- Inline styles for specific elements and fonts -->
+    <style>
+        /* Import fonts directly for this page if not globally imported in games.css */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Vazirmatn:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: var(--background-dark, #111); /* Fallback color */
+            color: var(--text-light, #eee); /* Fallback color */
+            line-height: 1.7;
+        }
+
+        .game-review {
+            max-width: 960px; /* Slightly wider content area */
+            margin: 40px auto;
+            padding: 40px;
+            background-color: var(--background-light, #222);
+            border-radius: 18px;
+            box-shadow: 0 0 20px rgba(0, 179, 255, 0.3), 0 0 30px rgba(0, 179, 255, 0.2); /* Neon glow */
+            border: 2px solid transparent; /* Placeholder for potential border */
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+        }
+
+        .game-review:hover {
+            box-shadow: 0 0 25px rgba(0, 179, 255, 0.5), 0 0 40px rgba(0, 179, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .game-review img {
+            width: 100%;
+            max-width: 400px; /* Limit image size */
+            height: auto;
+            border-radius: 12px;
+            margin: 20px auto; /* Center the image */
+            display: block;
+            border: 3px solid var(--primary-color); /* Primary color border */
+            box-shadow: 0 0 15px rgba(0, 179, 255, 0.6);
+        }
+
+        .game-review h2 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.8em;
+            color: var(--secondary-color, #336deb); /* Accent color for title */
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #336deb; /* Accent glow */
+        }
+
+        .game-review .meta {
+            font-size: 1.1em;
+            color: var(--text-muted, #aaa);
+            text-align: center;
+            margin-bottom: 30px;
+            display: block; /* Ensure it takes its own line */
+        }
+
+        .game-review .meta span { /* Style for star rating */
+            color: var(--secondary-color, #ffd700);
+            font-size: 1.2em;
+        }
+
+        .game-review article h3 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px rgba(0, 179, 255, 0.7); /* Neon glow for headings */
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+
+        .game-review article p {
+            font-size: 1.15em;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .game-review ul {
+            list-style: none;
+            padding-right: 0; /* Reset padding for RTL */
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .game-review ul li {
+            background-color: var(--background-light);
+            margin-bottom: 10px;
+            padding: 12px 15px 12px 35px; /* Space for icon */
+            border-radius: 8px;
+            position: relative;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border-left: 5px solid; /* For colored indicator */
+        }
+
+        .game-review ul li:hover {
+            background-color: var(--background-medium);
+            transform: translateX(-3px);
+        }
+
+        /* Positive points styling */
+        .game-review ul.pros li {
+            border-left-color: #00ff00; /* Green */
+        }
+        .game-review ul.pros li::before {
+            content: '✔'; /* Checkmark */
+            position: absolute;
+            right: -10px; /* Position for RTL */
+            color: #00ff00;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Negative points styling */
+        .game-review ul.cons li {
+            border-left-color: #ff0000; /* Red */
+        }
+        .game-review ul.cons li::before {
+            content: '✖'; /* Cross mark */
+            position: absolute;
+            right: -10px; /* Position for RTL */
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 25px;
+            font-size: 16px;
+            color: var(--text-muted, #aaa);
+            border-top: 2px solid var(--primary-color);
+            margin-top: 50px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .game-review {
+                margin: 20px 15px;
+                padding: 25px;
+            }
+            .game-review img {
+                max-width: 100%;
+            }
+            .game-review h2 {
+                font-size: 2.2em;
+            }
+            .game-review .meta {
+                font-size: 1em;
+            }
+            .game-review article h3 {
+                font-size: 1.5em;
+            }
+            .game-review article p, .game-review ul li {
+                font-size: 1.05em;
+            }
+            .game-review ul {
+                padding-right: 0;
+            }
+            .game-review ul li::before {
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="cyberpunk-theme"> <!-- Added a body class for potential global cyberpunk styling -->
+
+    <header>
+        <h1>🎮 دنیای بازی‌ها</h1>
+        <nav>
+            <!-- Updated links to potentially point to sections -->
+            <a href="../index.html#reviews">نقدها</a>
+            <a href="../index.html#about">درباره ما</a>
+            <a href="../index.html#contact">تماس با ما</a>
+        </nav>
+    </header>
+    
+
+    <main class="game-review">
+        <img src="../images/god-of-war.jpg" alt="God Of War Cover">
+        <h2>God Of War</h2>
+        <p class="meta">امتیاز: <span>⭐</span> ۹.۴/۱۰ | پلتفرم‌ها: PC, PS5, PS4 |سبک:اکشن ماجراجویی، جهان‌باز</p>
+
+        <article>
+            <h3>معرفی اجمالی</h3>
+            <p>
+                God of War Ragnarök، ساخته‌ی استودیو Santa Monica Studio، ادامه‌ی مستقیم داستان حماسی Kratos و پسرش Atreus در دنیای اساطیری نورس است. این بازی که یکی از موردانتظارترین عناوین برای کنسول‌های پلی‌استیشن بود، تجربه‌ای عمیق و احساسی را در کنار مبارزات نفس‌گیر و اکتشاف در سرزمین‌های جدید ارائه می‌دهد. داستان بازی حول محور پیشگویی Ragnarök (آخرالزمان نورس) و تلاش Kratos و Atreus برای یافتن راهی برای جلوگیری از آن یا حداقل بقا در برابر آن می‌چرخد.
+            </p>
+
+            <h3>گیم‌پلی و مبارزات</h3>
+            <p>
+               گیم‌پلی بازی، که بر پایه‌ی نسخه قبلی بنا شده، با اضافه کردن قابلیت‌های جدید و متنوع، تجربه‌ی مبارزات را غنی‌تر کرده است. Kratos با تبر Leviathan Axe و Chaos Blades خود، و Atreus با تیر و کمانش، مجموعه‌ای از حملات ترکیبی و مهارت‌های ویژه را به کار می‌گیرند. سیستم مبارزات، که ترکیبی از ضربات نزدیک، حملات دوربرد، و استفاده از محیط است، بسیار رضایت‌بخش و استراتژیک است. تنوع دشمنان و باس‌فایت‌های عظیم‌الجثه، چالش‌های منحصر به فردی را برای بازیکنان رقم می‌زند. قابلیت‌های جدید Atreus به عنوان یک همراه در مبارزات، لایه‌ی جدیدی از همکاری و تاکتیک را به بازی اضافه کرده است.
+            </p>
+
+            <h3>دنیای بازی و داستان</h3>
+            <p>
+              سفر Kratos و Atreus آن‌ها را به نه قلمرو از اساطیر نورس می‌برد، از جمله مناطقی که در بازی قبلی دیده نشدند. هر قلمرو دارای طراحی بصری خیره‌کننده، اتمسفر منحصر به فرد، و رازهای پنهان خود است. داستان بازی عمیق‌تر شده و بر رابطه‌ی پیچیده‌ی پدر و پسری، پذیرش سرنوشت، و پیامدهای تصمیمات تمرکز دارد. شخصیت‌پردازی کاراکترها، از جمله شخصیت‌های جدیدی مانند Thor و Odin، بسیار قوی است و روایت داستان، بازیکن را تا انتها درگیر خود نگه می‌دارد.
+            </p>
+
+            <h3>نکات مثبت</h3>
+            <ul class="pros">
+                <li>داستان‌سرایی عمیق و احساسی با شخصیت‌پردازی قوی</li>
+                <li>گیم‌پلی مبارزات روان، متنوع و رضایت‌بخش</li>
+                <li>طراحی بصری خیره‌کننده و دنیایی وسیع و پرجزئیات</li>
+                <li>باس‌فایت‌های حماسی و چالش‌برانگیز</li>
+                <li>موسیقی متن تاثیرگذار و صداپیشگی عالی</li>
+            </ul>
+
+            <h3>نکات منفی</h3>
+            <ul class="cons">
+                <li>برخی مکانیزم‌های گیم‌پلی ممکن است برای بازیکنان قدیمی تکراری به نظر برسد.</li>
+                <li>بهینه‌سازی برای پلتفرم PS4 نسبت به PS5 افت عملکرد جزئی دارد.</li>
+            </ul>
+
+            <h3>جمع‌بندی</h3>
+            <p>
+                God of War Ragnarök یک شاهکار دیگر از استودیو Santa Monica است که نه تنها انتظارات را برآورده می‌کند، بلکه در بسیاری از جنبه‌ها از نسخه قبلی نیز فراتر می‌رود. این بازی تجربه‌ای کامل از اکشن، ماجراجویی، داستان‌سرایی قوی و دنیایی شگفت‌انگیز را ارائه می‌دهد و یکی از بهترین بازی‌های انحصاری پلی‌استیشن و نسل خود محسوب می‌شود. این بازی برای هر کسی که به دنبال یک ماجراجویی حماسی با داستانی تأثیرگذار است، اکیداً توصیه می‌شود.
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>ساخته شده با ❤️</p>
+    </footer>
+</body>
+</html>

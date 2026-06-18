@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نقد بازی Red Dead Redemption 2</title>
+    <!-- Linking main stylesheet and game-specific stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="games.css">
+    <!-- Inline styles for specific elements and fonts -->
+    <style>
+        /* Import fonts directly for this page if not globally imported in games.css */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Vazirmatn:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: var(--background-dark, #111); /* Fallback color */
+            color: var(--text-light, #eee); /* Fallback color */
+            line-height: 1.7;
+        }
+
+        .game-review {
+            max-width: 960px; /* Slightly wider content area */
+            margin: 40px auto;
+            padding: 40px;
+            background-color: var(--background-light, #222);
+            border-radius: 18px;
+            box-shadow: 0 0 20px rgba(0, 179, 255, 0.3), 0 0 30px rgba(0, 179, 255, 0.2); /* Neon glow */
+            border: 2px solid transparent; /* Placeholder for potential border */
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+        }
+
+        .game-review:hover {
+            box-shadow: 0 0 25px rgba(0, 179, 255, 0.5), 0 0 40px rgba(0, 179, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .game-review img {
+            width: 100%;
+            max-width: 400px; /* Limit image size */
+            height: auto;
+            border-radius: 12px;
+            margin: 20px auto; /* Center the image */
+            display: block;
+            border: 3px solid var(--primary-color); /* Primary color border */
+            box-shadow: 0 0 15px rgba(0, 179, 255, 0.6);
+        }
+
+        .game-review h2 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.8em;
+            color: var(--secondary-color, #f32525); /* Accent color for title */
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #f32525; /* Accent glow */
+        }
+
+        .game-review .meta {
+            font-size: 1.1em;
+            color: var(--text-muted, #aaa);
+            text-align: center;
+            margin-bottom: 30px;
+            display: block; /* Ensure it takes its own line */
+        }
+
+        .game-review .meta span { /* Style for star rating */
+            color: var(--secondary-color, #ffd700);
+            font-size: 1.2em;
+        }
+
+        .game-review article h3 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px rgba(0, 179, 255, 0.7); /* Neon glow for headings */
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+
+        .game-review article p {
+            font-size: 1.15em;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .game-review ul {
+            list-style: none;
+            padding-right: 0; /* Reset padding for RTL */
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .game-review ul li {
+            background-color: var(--background-light);
+            margin-bottom: 10px;
+            padding: 12px 15px 12px 35px; /* Space for icon */
+            border-radius: 8px;
+            position: relative;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border-left: 5px solid; /* For colored indicator */
+        }
+
+        .game-review ul li:hover {
+            background-color: var(--background-medium);
+            transform: translateX(-3px);
+        }
+
+        /* Positive points styling */
+        .game-review ul.pros li {
+            border-left-color: #00ff00; /* Green */
+        }
+        .game-review ul.pros li::before {
+            content: '✔'; /* Checkmark */
+            position: absolute;
+            right: -10px; /* Position for RTL */
+            color: #00ff00;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Negative points styling */
+        .game-review ul.cons li {
+            border-left-color: #ff0000; /* Red */
+        }
+        .game-review ul.cons li::before {
+            content: '✖'; /* Cross mark */
+            position: absolute;
+            right: -10px; /* Position for RTL */
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 25px;
+            font-size: 16px;
+            color: var(--text-muted, #aaa);
+            border-top: 2px solid var(--primary-color);
+            margin-top: 50px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .game-review {
+                margin: 20px 15px;
+                padding: 25px;
+            }
+            .game-review img {
+                max-width: 100%;
+            }
+            .game-review h2 {
+                font-size: 2.2em;
+            }
+            .game-review .meta {
+                font-size: 1em;
+            }
+            .game-review article h3 {
+                font-size: 1.5em;
+            }
+            .game-review article p, .game-review ul li {
+                font-size: 1.05em;
+            }
+            .game-review ul {
+                padding-right: 0;
+            }
+            .game-review ul li::before {
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="cyberpunk-theme"> <!-- Added a body class for potential global cyberpunk styling -->
+
+    <header>
+        <h1>🎮 دنیای بازی‌ها</h1>
+        <nav>
+            <!-- Updated links to potentially point to sections -->
+            <a href="../index.html#reviews">نقدها</a>
+            <a href="../index.html#about">درباره ما</a>
+            <a href="../index.html#contact">تماس با ما</a>
+        </nav>
+    </header>
+
+    <main class="game-review">
+        <img src="../images/red-dead-redemption-2.jpg" alt="CyberPunk 2077 Cover">
+        <h2>Red Dead Redemption 2</h2>
+        <p class="meta">امتیاز: <span>⭐</span> ۹.۰/۱۰ | پلتفرم‌ها: PC, PS5, Xbox Series X/S, PS4 | سبک: اکشن ، ماجراجویی، وسترن</p>
+
+        <article>
+            <h3>معرفی اجمالی</h3>
+            <p>
+                Red Dead Redemption 2 ساخته استودیو Rockstar Games تجربه ای بی نظیر در ژانر اکشن, ماجراجویی و وسترن ارائه  می دهد. این بازی شمارا به سال ۱۸۹۹ و در ایالت‌های غرب میانه آمریکا و ایالت‌های جنوبی آمریکا می برد.
+            </p>
+
+            <h3>گیم‌پلی و مبارزات</h3>
+            <p>
+              بازی Red Dead Redemption 2 گیم پلی زیبایی دارد که میشه به ماجراجویی های طولانی و حتی جهان باز بودن این بازی و ماموریت های پر رمز و راز اشاره کرد که مبارزاتی زیبا ازجمله مبارزه با اسب و سلاح سرد و گرم و.... دارد.
+            </p>
+
+            <h3>دنیای بازی و داستان</h3>
+            <p>
+              یکی از بازی های پرفروش و گرافیک بالا در تاریخ بازی های ویدیو است. داستان در یک بازنمایی تخیلی از ایالات متحده در سال ۱۸۹۹ اتفاق می‌افتد و ماجراجویی‌های آرتور مورگان، یک یاغی و عضو گروه ون در لیند را دنبال می‌کند که باید با چالش‌های غرب وحشی رو به زوال روبرو شود، در حالی که برای زنده ماندن در برابر نیروهای دولتی، گروه‌های رقیب و سایر دشمنان تلاش می‌کند.
+            </p>
+
+            <h3>نکات مثبت</h3>
+            <ul class="pros">
+                <li>داستان عمیق و شخصیت‌پردازی بی‌نظیر (به‌ویژه آرتور مورگان)</li>
+                <li>جهانی زنده و نفس‌کش با جزئیات خیره‌کننده (رفتار NPCها، چرخه روز/شب، آب و هوا)</li>
+                <li>آزادی عمل بی‌نهایت در سبک بازی</li>
+                <li>گرافیک سینمایی و جلوه‌های بصری چشمنواز</li>
+                <li>محتوای عظیم (ماموریت‌های فرعی، شکار، رویدادهای تصادفی، تعاملات بی‌شمار)</li>
+            </ul>
+
+            <h3>نکات منفی</h3>
+            <ul class="cons">
+                <li>گیم‌پلی کند و سنگین (انیمیشن‌های طولانی، کنترل‌های غیرمنعطف)</li>
+                <li>سیستم‌های مدیریتی خسته‌کننده (تمیزکاری اسلحه، هسته‌های انرژی، سیستم شرافت)</li>
+            </ul>
+
+            <h3>جمع‌بندی</h3>
+            <p>
+                Red Dead Redemption 2 چیزی فراتر از یک بازی ویدیویی است؛ یک تجربه‌ی سینمایی، یک حماسه‌ی انسانی و یک شبیه‌ساز زنده‌ی وایلد وست است که راک‌استار با وسواسی بی‌نظیر آن را ساخته. اما این شاهکار، همزمان هم بزرگ‌ترین نقاط قوت و هم بزرگ‌ترین نقاط ضعف خود را از یک جا می‌گیرد: واقع‌گرایی افراطی.
+
+
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>ساخته شده با ❤️</p>
+    </footer>
+</body>
+</html>
