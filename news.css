@@ -1,0 +1,457 @@
+/* ===== Variable Definitions ===== */
+:root {
+    --background-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --primary-color: #00f7ff;
+    --secondary-color: #ff7f50;
+    --accent-color: #d4af37;
+    --heading-shadow-color: rgba(0, 247, 255, 0.7);
+    --box-shadow-glow: rgba(0, 247, 255, 0.3);
+    --footer-bg-color: #0d0d1a;
+    --footer-border-color: #d4af37;
+    --bullet-color: #ff7f50;
+    --important-bullet-color: #ff4500;
+    --hero-bg-color: #2a2a4a;
+    --card-bg-color: rgba(26, 26, 46, 0.8);
+}
+
+/* ===== General Body Styles ===== */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Vazirmatn', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.content-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== Header Styles ===== */
+.main-header {
+    background: linear-gradient(135deg, var(--background-color) 0%, var(--hero-bg-color) 100%);
+    color: var(--text-color);
+    padding: 20px 0;
+    border-bottom: 3px solid var(--primary-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.site-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5em;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--heading-shadow-color), 0 0 5px var(--heading-shadow-color);
+    margin: 0;
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 42, 62, 0.8);
+    z-index: -1;
+}
+
+.hero-section h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5em;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px var(--heading-shadow-color), 0 0 5px var(--heading-shadow-color);
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+/* ===== Section Headings ===== */
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.2em;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px var(--heading-shadow-color), 0 0 5px var(--heading-shadow-color);
+    margin-top: 0;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+#intro p {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ===== چیدمان نواری/افقی کارت‌ها (نقدها) ===== */
+.reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.game-review {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--card-bg-color);
+    padding: 15px 20px 15px 15px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px var(--box-shadow-glow), 0 0 15px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 200, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 20px;
+    overflow: hidden;
+    min-height: 140px;
+}
+
+.game-review:hover {
+    transform: translateX(6px) scale(1.01);
+    box-shadow: 0 15px 35px var(--box-shadow-glow), 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+/* عکس: 120x180 */
+.game-review img {
+    width: 120px;
+    height: 180px;
+    min-width: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 5px 15px var(--box-shadow-glow);
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.game-review .info {
+    text-align: right;
+    flex: 1;
+    padding: 5px 0;
+}
+
+.game-review .info h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.1em;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 6px;
+    text-align: right;
+}
+
+.game-review .info p {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+    text-align: justify;
+    color: #ccc;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 50px;
+}
+
+.call-to-action-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(255, 127, 80, 0.5);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.call-to-action-button:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.7);
+    transform: translateY(-3px);
+}
+
+/* ===== پنل اخبار (وسط بالا) ===== */
+.panel-tabs-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0.5rem 0 1.5rem;
+    padding: 0.5rem 1rem;
+    background: #1a1e28;
+    border-radius: 60px;
+    border: 1px solid #2f3545;
+}
+
+.panel-tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.6rem 2.2rem;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Vazirmatn', sans-serif;
+    color: #b0b9cc;
+    cursor: default;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.panel-tab-btn.active {
+    background: #f7c948;
+    color: #1a1d26;
+    box-shadow: 0 6px 18px rgba(247, 201, 72, 0.35);
+}
+
+/* ===== بخش اخبار ===== */
+.news-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #1a1f2b;
+    border-radius: 1.8rem;
+    border: 1px solid #2c3346;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.news-item {
+    background: #232a38;
+    border-radius: 1.2rem;
+    padding: 1.2rem;
+    border: 1px solid #323a4c;
+    transition: 0.2s;
+}
+
+.news-item:hover {
+    border-color: #f7c948;
+    transform: translateY(-3px);
+}
+
+.news-item h3 {
+    color: #f0e4cc;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.news-item h3 a {
+    color: #f0e4cc;
+    text-decoration: none;
+}
+
+.news-item h3 a:hover {
+    color: #f7c948;
+}
+
+.news-item p {
+    color: #b4bed5;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.news-meta {
+    color: #8f99b0;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 0.7rem;
+    background: #f7c948;
+    color: #141a24;
+    padding: 0.3rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+
+.read-more:hover {
+    background: #ffda6a;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-top: 4px solid var(--footer-border-color);
+    border-radius: 0 0 12px 12px;
+    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+footer p:last-child {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* ===== General Links ===== */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    text-shadow: 0 0 8px var(--heading-shadow-color);
+}
+
+/* ===== Responsive: Mobile ===== */
+@media (max-width: 700px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .site-title {
+        font-size: 1.8em;
+    }
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .main-nav a {
+        font-size: 1em;
+        padding: 5px 10px;
+    }
+    .hero-section h2 {
+        font-size: 2em;
+    }
+    .hero-section p {
+        font-size: 1.1em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+
+    /* تبدیل به عمودی در موبایل */
+    .game-review {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+        min-height: auto;
+    }
+    .game-review img {
+        width: 100%;
+        height: 220px;
+        min-width: unset;
+        border-radius: 10px;
+    }
+    .game-review .info {
+        text-align: center;
+    }
+    .game-review .info h3 {
+        text-align: center;
+        font-size: 1em;
+    }
+    .game-review .info p {
+        -webkit-line-clamp: 3;
+        max-height: 70px;
+        text-align: center;
+    }
+    .game-review:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+
+    .content-section {
+        padding: 40px 15px;
+    }
+    .panel-tabs-wrapper {
+        gap: 0.8rem;
+        padding: 0.4rem;
+        border-radius: 40px;
+    }
+    .panel-tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .site-title {
+        font-size: 1.5em;
+    }
+    .hero-section {
+        padding: 40px 15px;
+    }
+    .hero-section h2 {
+        font-size: 1.6em;
+    }
+    .game-review img {
+        height: 180px;
+    }
+}
